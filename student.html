@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="student.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Management System</h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search by name">
+        </div>
+        <table id="studentTable">
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Grade</th>
+                    <th>Actions</th>
+                    <th>Attendance</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <div class="form-container">
+            <h2>Add Student</h2>
+            <form id="addStudentForm">
+                <input type="text" id="studentId" placeholder="Student ID">
+                <input type="text" id="studentName" placeholder="Name">
+                <input type="number" id="studentAge" placeholder="Age">
+                <input type="text" id="studentGrade" placeholder="Grade">
+                <button type="submit">Add</button>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="addStudentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Add Student</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="addStudentBtn">Add Student</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="editStudentModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Edit Student</h5>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <input type="text" id="editStudentId" placeholder="Student ID" disabled>
+                <input type="text" id="editStudentName" placeholder="Name">
+                <input type="number" id="editStudentAge" placeholder="Age">
+                <input type="text" id="editStudentGrade" placeholder="Grade">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" id="editStudentBtn">Save Changes</button>
+            </div>
+        </div>
+    </div>
+    <script src="student.js"></script>
+</body>
+</html>
